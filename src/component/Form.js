@@ -1,57 +1,68 @@
-import React from 'react';
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Table from 'react-bootstrap/Table';
-import { Link, useNavigate } from 'react-router-dom';
-
-
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Table from "react-bootstrap/Table";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
-    const navigate=useNavigate()
-    function navto(url){
-        navigate(url)
-    }
+  const navigate = useNavigate();
+  function navto(url) {
+    navigate(url);
+  }
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary py-2">
         <Container fluid>
-          <Navbar.Brand>Task</Navbar.Brand><br />
+          <Navbar.Brand>Task</Navbar.Brand>
+          <br />
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: "100px" }}
               navbarScroll>
               <Nav.Link href="#action1"></Nav.Link>
               <Nav.Link href="#action2"></Nav.Link>
-              <Nav.Link href="#" disabled>
-              </Nav.Link>
+              <Nav.Link href="#" disabled></Nav.Link>
             </Nav>
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/create')}>New Task</button>              
-              <button type="button" class="btn btn-outline-warning"> Refresh</button>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onClick={() => navto("/tasks/create")}>
+                New Task
+              </button>
+              <button type="button" class="btn btn-outline-warning">
+                {" "}
+                Refresh
+              </button>
             </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <Navbar expand="lg" className="bg-body-tertiary py-0">
         <Container fluid>
-          <Navbar.Brand>All Task</Navbar.Brand><br />
+          <Navbar.Brand>All Task</Navbar.Brand>
+          <br />
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: "100px" }}
               navbarScroll>
               <Nav.Link href="#action1"></Nav.Link>
               <Nav.Link href="#action2"></Nav.Link>
-              <Nav.Link href="#" disabled>
-              </Nav.Link>
+              <Nav.Link href="#" disabled></Nav.Link>
             </Nav>
-            <button type="button" class="btn btn-outline-success btn-lg my-2 mx-4">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+            <button
+              type="button"
+              class="btn btn-outline-success btn-lg my-2 mx-4">
+              Search <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -73,12 +84,24 @@ function Form() {
             <td>12/10/2024</td>
             <td>Low</td>
             <td>This task is good</td>
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
-              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onClick={() => navto("/tasks/details/:id")}>
+                Edit
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                onClick={() => navto("/tasks/delete/:id")}>
+                {" "}
+                Delete
+              </button>
             </div>
-
-            
           </tr>
           <tr>
             <td>User2</td>
@@ -86,11 +109,24 @@ function Form() {
             <td>14/09/2024</td>
             <td>High</td>
             <td>This task is good</td>
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
-              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onClick={() => navto("/tasks/details/:id")}>
+                Edit
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                onClick={() => navto("/tasks/delete/:id")}>
+                {" "}
+                Delete
+              </button>
             </div>
-           
           </tr>
           <tr>
             <td>User3</td>
@@ -98,22 +134,49 @@ function Form() {
             <td>18/08/2024</td>
             <td>Low</td>
             <td>This task is good</td>
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
-              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onClick={() => navto("/tasks/details/:id")}>
+                Edit
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                onClick={() => navto("/tasks/delete/:id")}>
+                {" "}
+                Delete
+              </button>
             </div>
-                      </tr>
+          </tr>
           <tr>
             <td>User4</td>
             <td>In Progress</td>
             <td>12/06/2024</td>
             <td>Normal</td>
             <td>This task is good</td>
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
-              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onClick={() => navto("/tasks/details/:id")}>
+                Edit
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                onClick={() => navto("/tasks/delete/:id")}>
+                {" "}
+                Delete
+              </button>
             </div>
-            
           </tr>
         </tbody>
       </Table>
@@ -124,17 +187,20 @@ function Form() {
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: "100px" }}
               navbarScroll>
               <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">20</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      20
+                    </a>
+                  </li>
                 </ul>
               </nav>
               <Nav.Link href="#action1"></Nav.Link>
               <Nav.Link href="#action2"></Nav.Link>
-              <Nav.Link href="#" disabled>
-              </Nav.Link>
+              <Nav.Link href="#" disabled></Nav.Link>
             </Nav>
             <nav aria-label="Page navigation example">
               <ul class="pagination">
@@ -148,7 +214,11 @@ function Form() {
                     <span aria-hidden="true">&laquo;Prev</span>
                   </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    1
+                  </a>
+                </li>
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;Next</span>
@@ -161,7 +231,6 @@ function Form() {
                 </li>
               </ul>
             </nav>
-
           </Navbar.Collapse>
         </Container>
       </Navbar>
