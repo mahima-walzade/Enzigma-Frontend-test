@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 
-function NewTask() {
+function Addnew() {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -81,4 +81,22 @@ function NewTask() {
   );
 }
 
-export default NewTask;
+export default Addnew;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

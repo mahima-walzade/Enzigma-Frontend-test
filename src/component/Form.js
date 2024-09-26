@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Mainform() {
+function Form() {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary py-2">
@@ -170,4 +170,4 @@ function Mainform() {
     </div>
   );
 }
-export default Mainform;
+export default Form;

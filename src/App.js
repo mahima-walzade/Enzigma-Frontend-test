@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Addnew from './component/Addnew';
+import Form from './component/Form';
+import Edit from './component/Edit';
+import { Route, Routes } from 'react-router-dom';
+import Delete from './component/Delete';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/'element={<Form/>}/>
+      <Route path='/tasks/create' element={<Addnew/>}/>
+      <Route path='/tasks/details/:id'element={<Edit/>}/>
+      <Route path='/tasks/delete/:id'element={<Delete/>}/>
+
+    </Routes>
   );
 }
 
