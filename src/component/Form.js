@@ -5,11 +5,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Table from 'react-bootstrap/Table';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 function Form() {
+    const navigate=useNavigate()
+    function navto(url){
+        navigate(url)
+    }
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary py-2">
@@ -27,10 +31,7 @@ function Form() {
               </Nav.Link>
             </Nav>
             <div class="btn-group" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline-warning" >
-              <Link to={`/tasks/create`}>
-              All Task
-              </Link> </button>
+            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/create')}>New Task</button>              
               <button type="button" class="btn btn-outline-warning"> Refresh</button>
             </div>
           </Navbar.Collapse>
@@ -50,7 +51,7 @@ function Form() {
               <Nav.Link href="#" disabled>
               </Nav.Link>
             </Nav>
-            <button type="button" class="btn btn-outline-success btn-lg my-2 mx-4">Success </button>
+            <button type="button" class="btn btn-outline-success btn-lg my-2 mx-4">Search <i class="fa-solid fa-magnifying-glass"></i></button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -72,14 +73,12 @@ function Form() {
             <td>12/10/2024</td>
             <td>Low</td>
             <td>This task is good</td>
-            <td> <button type="button" class="btn btn-outline-warning">
-            <Link to={`/tasks/details/:id`}>
-              Edit
-              </Link> </button>
-              <button type="button" class="btn btn-outline-danger"> 
-              <Link to={`/tasks/delete/:id`}>
-              Delete
-              </Link> </button></td>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
+              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            </div>
+
+            
           </tr>
           <tr>
             <td>User2</td>
@@ -87,11 +86,11 @@ function Form() {
             <td>14/09/2024</td>
             <td>High</td>
             <td>This task is good</td>
-            <td> <button type="button" class="btn btn-outline-warning"> <Link to={`/tasks/details/:id`}>
-              Edit
-              </Link> </button><button type="button" class="btn btn-outline-danger">  <Link to={`/tasks/delete/:id`}>
-              Delete
-              </Link> </button></td>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
+              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            </div>
+           
           </tr>
           <tr>
             <td>User3</td>
@@ -99,23 +98,22 @@ function Form() {
             <td>18/08/2024</td>
             <td>Low</td>
             <td>This task is good</td>
-            <td> <button type="button" class="btn btn-outline-warning"> <Link to={`/tasks/details/:id`}>
-              Edit
-              </Link> </button><button type="button" class="btn btn-outline-danger"> <Link to={`/tasks/delete/:id`}>
-              Delete
-              </Link> </button></td>
-          </tr>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
+              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            </div>
+                      </tr>
           <tr>
             <td>User4</td>
             <td>In Progress</td>
             <td>12/06/2024</td>
             <td>Normal</td>
             <td>This task is good</td>
-            <td> <button type="button" class="btn btn-outline-warning"> <Link to={`/tasks/details/:id`}>
-              Edit
-              </Link> </button><button type="button" class="btn btn-outline-danger"> <Link to={`/tasks/delete/:id`}>
-              Delete
-              </Link> </button></td>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-warning" onClick={()=>navto('/tasks/details/:id')}>Edit</button>              
+              <button type="button" class="btn btn-outline-danger" onClick={()=>navto('/tasks/delete/:id')}> Delete</button>
+            </div>
+            
           </tr>
         </tbody>
       </Table>

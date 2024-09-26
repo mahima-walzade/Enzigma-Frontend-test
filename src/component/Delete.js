@@ -6,8 +6,7 @@ import Form from 'react-bootstrap/Form';
 function Delete() {
     return (
 
-        <div lassName='Newtask template d-flex justify-content-center align-items-center '>
-        
+        <div lassName='Newtask template d-flex justify-content-center align-items-center '>        
        <div className='80-w p-5 rounded bg-white'>
             <form class="row g-1 needs-validation " novalidate>
             <div className="d-grid gap-2">
