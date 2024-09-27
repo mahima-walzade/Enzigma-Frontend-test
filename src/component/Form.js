@@ -3,9 +3,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Table from "react-bootstrap/Table";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 function Form() {
+
   const navigate = useNavigate();
   function navto(url) {
     navigate(url);
@@ -33,6 +37,7 @@ function Form() {
               <button
                 type="button"
                 class="btn btn-outline-warning"
+
                 onClick={() => navto("/tasks/create")}>
                 New Task
               </button>
@@ -58,11 +63,24 @@ function Form() {
               <Nav.Link href="#action2"></Nav.Link>
               <Nav.Link href="#" disabled></Nav.Link>
             </Nav>
-            <button
+            <Form inline>
+        <Row>
+          <Col xs="auto">
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              className=" mr-sm-2"
+            />
+          </Col>
+         
+        </Row>
+      </Form>
+           
+             {/* <button
               type="button"
               class="btn btn-outline-success btn-lg my-2 mx-4">
               Search <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+            </button>  */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

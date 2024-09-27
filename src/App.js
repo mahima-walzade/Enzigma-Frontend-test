@@ -1,5 +1,4 @@
 import './App.css';
-import { useState } from 'react';
 
 import Addnew from './component/Addnew';
 import Form from './component/Form';
