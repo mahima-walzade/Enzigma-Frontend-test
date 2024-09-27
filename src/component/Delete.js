@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function Delete() {
+function Delete(props) {
   return (
     <div className="Newtask template d-flex justify-content-center align-items-center bg-secondary vh-100">
       <div className="80-w p-5 rounded bg-white">

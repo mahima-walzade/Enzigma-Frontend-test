@@ -72,8 +72,7 @@ function Addnew(props) {
             Cancel
           </button>
 
-          <button type="button" class="btn btn-outline-success" onClick={()=>{props.addtask(inputtask)
-        setInputtask("")}} >
+          <button type="button" class="btn btn-outline-success"  >
             Save
           </button>
         </Form>
