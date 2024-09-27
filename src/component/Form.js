@@ -3,13 +3,9 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Table from "react-bootstrap/Table";
-import { useNavigate} from "react-router-dom";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
+import { useNavigate } from "react-router-dom";
 
 function Form() {
-
   const navigate = useNavigate();
   function navto(url) {
     navigate(url);
@@ -25,7 +21,8 @@ function Form() {
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
-              navbarScroll>
+              navbarScroll
+            >
               <Nav.Link href="#action1"></Nav.Link>
               <Nav.Link href="#action2"></Nav.Link>
               <Nav.Link href="#" disabled></Nav.Link>
@@ -33,12 +30,13 @@ function Form() {
             <div
               class="btn-group"
               role="group"
-              aria-label="Basic outlined example">
+              aria-label="Basic outlined example"
+            >
               <button
                 type="button"
                 class="btn btn-outline-warning"
-
-                onClick={() => navto("/tasks/create")}>
+                onClick={() => navto("/tasks/create")}
+              >
                 New Task
               </button>
               <button type="button" class="btn btn-outline-warning">
@@ -63,24 +61,11 @@ function Form() {
               <Nav.Link href="#action2"></Nav.Link>
               <Nav.Link href="#" disabled></Nav.Link>
             </Nav>
-            <Form inline>
-        <Row>
-          <Col xs="auto">
-            <Form.Control
-              type="text"
-              placeholder="Search"
-              className=" mr-sm-2"
-            />
-          </Col>
-         
-        </Row>
-      </Form>
-           
-             {/* <button
+            <button
               type="button"
               class="btn btn-outline-success btn-lg my-2 mx-4">
               Search <i class="fa-solid fa-magnifying-glass"></i>
-            </button>  */}
+            </button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

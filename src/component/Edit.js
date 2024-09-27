@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 
 function Edit() {
   const [validated, setValidated] = useState(false);
-  const [inputtask,setInputtask]=useState("")
+  const [inputtask, setInputtask] = useState("");
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -26,8 +26,13 @@ function Edit() {
             <Form.Group as={Col} md="4" controlId="validationCustom01">
               <Form.Label>Assigned To</Form.Label>
               <br />
-              <input type="text" 
-              value={inputtask} placeholder="Enter user" onChange={(e)=>setInputtask(e.target.value)}className="w-100 h-23" />
+              <input
+                type="text"
+                value={inputtask}
+                placeholder="Enter user"
+                onChange={(e) => setInputtask(e.target.value)}
+                className="w-100 h-23"
+              />
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Status</Form.Label>
@@ -44,8 +49,13 @@ function Edit() {
           <Row className="mb-3 mx-5">
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Due Date</Form.Label>
-              <input type="date" 
-              value={inputtask} placeholder="Enter user" onChange={(e)=>setInputtask(e.target.value)}className="w-100 h-23" />
+              <input
+                type="date"
+                value={inputtask}
+                placeholder="Enter user"
+                onChange={(e) => setInputtask(e.target.value)}
+                className="w-100 h-23"
+              />
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Priority</Form.Label>
@@ -61,11 +71,17 @@ function Edit() {
           <Row className="mb-3 mx-5">
             <Form.Group
               className="mb-3"
-              controlId="exampleForm.ControlTextarea1">
+              controlId="exampleForm.ControlTextarea1"
+            >
               <Form.Label>Description</Form.Label>
               <br />
-              <input type="text" 
-              value={inputtask} placeholder="Enter desc" onChange={(e)=>setInputtask(e.target.value)}className="w-50 " />
+              <input
+                type="text"
+                value={inputtask}
+                placeholder="Enter desc"
+                onChange={(e) => setInputtask(e.target.value)}
+                className="w-50 "
+              />
             </Form.Group>
           </Row>
           <button type="button" class="btn btn-outline-warning mx-4">

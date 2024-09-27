@@ -14,7 +14,8 @@ function Delete(props) {
           </div>
           <Form.Group
             className="mb-3 w-75"
-            controlId="exampleForm.ControlTextarea1">
+            controlId="exampleForm.ControlTextarea1"
+          >
             <h6> Do you want to delete task?</h6>
             <button type="button" class="btn btn-outline-warning m-3">
               No
