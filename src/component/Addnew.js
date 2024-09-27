@@ -6,6 +6,8 @@ import Row from "react-bootstrap/Row";
 
 function Addnew(props) {
   const [validated, setValidated] = useState(false);
+  const [inputtask,setInputtask]=useState("")
+
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -16,7 +18,7 @@ function Addnew(props) {
     setValidated(true);
   };
   return (
-    <div className="">
+    <div >
       <h5 className="m-5 my-2">New Task</h5>
       <hr />
       <div class="w-75">
@@ -25,7 +27,7 @@ function Addnew(props) {
             <Form.Group as={Col} md="4" controlId="validationCustom01">
               <Form.Label>Assigned To</Form.Label>
               <br />
-              <input type="text" className="w-100 h-23" />
+              <input type="text" value={inputtask} placeholder="Enter user" onChange={(e)=>setInputtask(e.target.value)} className="w-100 h-23" />
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Status</Form.Label>
@@ -42,7 +44,8 @@ function Addnew(props) {
           <Row className="mb-3 mx-5">
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Due Date</Form.Label>
-              <input type="date" className="w-100 h-23" />
+              <input type="date"
+              value={inputtask} placeholder="Enter user" onChange={(e)=>setInputtask(e.target.value)} className="w-100 h-23" />
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Priority</Form.Label>
@@ -62,15 +65,15 @@ function Addnew(props) {
             >
               <Form.Label>Description</Form.Label>
               <br />
-              <input type="text" className="w-50 " />
+              <input type="text" className="w-50 " value={inputtask} placeholder="Enter desc" onChange={(e)=>setInputtask(e.target.value)} />
             </Form.Group>
           </Row>
           <button type="button" class="btn btn-outline-warning mx-4">
             Cancel
           </button>
 
-          <button type="button" class="btn btn-outline-success">
-            {" "}
+          <button type="button" class="btn btn-outline-success" onClick={()=>{props.addtask(inputtask)
+        setInputtask("")}} >
             Save
           </button>
         </Form>
